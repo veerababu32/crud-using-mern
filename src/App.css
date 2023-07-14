@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: Montserrat;
+  font-size: 16px;
+}
+
+#root {
+  height: 100vh;
+}

@@ -1,0 +1,14 @@
+nodemon
+express
+mongoose
+cors
+jsonwebtoken
+cookieparser
+dotenv
+bcrypt
+
+react
+react-dom
+axios
+web-vitals
+zustand
