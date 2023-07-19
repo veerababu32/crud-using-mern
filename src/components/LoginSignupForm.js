@@ -1,7 +1,7 @@
 import authStore from "../stores/authStore";
 import { useNavigate } from "react-router-dom";
 
-function LoginSignupForm({ option }) {
+function LoginSignupForm({ option, setOption }) {
   const store = authStore();
   const navigate = useNavigate();
 
@@ -24,6 +24,7 @@ function LoginSignupForm({ option }) {
       .signup()
       .then(() => {
         navigate("/login");
+        setOption(1);
       })
       .catch((err) => {
         alert("User already exist!!!");
@@ -44,9 +45,11 @@ function LoginSignupForm({ option }) {
       >
         <input
           id="userName"
-          name="name"
+          name="username"
           type="text"
           placeholder="Name"
+          onChange={store.updateSignupForm}
+          value={store.signupForm.username}
           required={option === 2 ? true : false}
           disabled={option === 1 || option === 3 ? true : false}
           style={{ display: option === 1 || option === 3 ? "none" : "block" }}

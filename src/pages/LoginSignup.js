@@ -1,6 +1,5 @@
 import { useState } from "react";
 import LoginSignupForm from "../components/LoginSignupForm";
-import "./Login.css";
 
 function LoginSignup() {
   const [option, setOption] = useState(1);
@@ -40,7 +39,7 @@ function LoginSignup() {
             Forgot
           </li>
         </ul>
-        <LoginSignupForm option={option} />
+        <LoginSignupForm option={option} setOption={setOption} />
       </div>
     </div>
   );

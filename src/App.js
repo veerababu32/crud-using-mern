@@ -7,7 +7,7 @@ import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter([
   {
-    path: "/Login",
+    path: "/login",
     element: <LoginSignup />,
   },
   {

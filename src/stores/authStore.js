@@ -10,6 +10,7 @@ const authStore = create((set) => ({
   },
 
   signupForm: {
+    username: "",
     email: "",
     password: "",
   },
@@ -56,6 +57,7 @@ const authStore = create((set) => ({
     await axios.post("/signup", signupForm);
     set({
       signupForm: {
+        username: "",
         email: "",
         password: "",
       },

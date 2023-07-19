@@ -2,7 +2,7 @@ import { create } from "zustand";
 import axios from "axios";
 
 const notesStore = create((set) => ({
-  notes: null,
+  notes: [],
 
   createForm: {
     title: "",
@@ -34,7 +34,7 @@ const notesStore = create((set) => ({
   },
 
   createNote: async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const { createForm, notes } = notesStore.getState();
     const res = await axios.post("/notes", createForm);
     set({
@@ -69,7 +69,7 @@ const notesStore = create((set) => ({
   },
 
   updateNote: async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const {
       updateForm: { _id, title, body },
       notes,
