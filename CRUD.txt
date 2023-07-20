@@ -12,3 +12,4 @@ react-dom
 axios
 web-vitals
 zustand
+react-toastify
